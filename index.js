@@ -66,9 +66,18 @@ function onUpdateIsDone(task) {
 function onTaskTitleClicked(task) {
     console.log("タイトルがクリックされました。", task);
 
+ /*   if(task.isDone=="true"){
+        task.isDone="false"
+    }
+    else if(task.isDone=="false"){
+        task.isDone="true"
+    }*/
+
     // 達成状態を更新(このままだと、現在の達成状態で更新されてしまう！)
-    const currentValue = task.isDone;
-    task.isDone = currentValue;
+//    const currentValue = task.isDone;
+//    task.isDone = currentValue;
+
+    task.isDone=!task.isDone
 
     return task;
 }
